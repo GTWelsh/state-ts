@@ -1,6 +1,6 @@
 {
     "name": "state-ts",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Easy state management in Javascript or Typescript.",
     "main": "src/index.js",
     "scripts": {
