@@ -7,7 +7,7 @@
         "test": "mocha -r ts-node/register src/**/*.spec.ts"
     },
     "author": "Chris Jones",
-    "license": "ISC",
+    "license": "MIT",
     "typings": "src/index",
     "repository": {
         "type": "git",
