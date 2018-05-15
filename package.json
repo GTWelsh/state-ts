@@ -1,19 +1,23 @@
 {
-  "name": "state-ts",
-  "version": "0.0.1",
-  "description": "Easy state management in Javascript or Typescript.",
-  "main": "src/index.js",
-  "scripts": {
-    "test": "mocha -r ts-node/register src/**/*.spec.ts"
-  },
-  "author": "Chris Jones",
-  "license": "ISC",
-  "typings": "src/index",
-  "devDependencies": {
-    "@types/chai": "^4.1.3",
-    "@types/mocha": "^5.2.0",
-    "chai": "^4.1.2",
-    "mocha": "^5.1.1",
-    "ts-node": "^6.0.3"
-  }
+    "name": "state-ts",
+    "version": "0.0.1",
+    "description": "Easy state management in Javascript or Typescript.",
+    "main": "src/index.js",
+    "scripts": {
+        "test": "mocha -r ts-node/register src/**/*.spec.ts"
+    },
+    "author": "Chris Jones",
+    "license": "ISC",
+    "typings": "src/index",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/GTWelsh/state-ts.git"
+    },
+    "devDependencies": {
+        "@types/chai": "^4.1.3",
+        "@types/mocha": "^5.2.0",
+        "chai": "^4.1.2",
+        "mocha": "^5.1.1",
+        "ts-node": "^6.0.3"
+    }
 }
