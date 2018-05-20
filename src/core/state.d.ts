@@ -1,9 +1,10 @@
 declare class State {
     private maxStackSize;
+    private freeze;
     private stackIndex;
     private stack;
     private flags;
-    constructor(maxStackSize: number);
+    constructor(maxStackSize: number, freeze?: boolean);
     readonly Current: Readonly<any>;
     Change(alterations: object): void;
     Rollback(steps: number): void;

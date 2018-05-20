@@ -5,7 +5,7 @@ class State {
         removeFutureStack: false
     };
 
-    constructor(private maxStackSize: number) { }
+    constructor(private maxStackSize: number, private freeze: boolean = true) { }
 
     public get Current(): Readonly<any> {
         if (this.stackIndex !== null && (this.stack.length - 1) >= this.stackIndex) {
@@ -97,10 +97,14 @@ class State {
         if (this.IsBlankObject(alterations)) {
             return this.Current;
         }
-        return Object.freeze({
+        const newState = {
             ...this.Current,
             ...alterations
-        });
+        };
+
+        const result = this.freeze ? Object.freeze(newState) : newState;
+
+        return result;
     }
 }
 

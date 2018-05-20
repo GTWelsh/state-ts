@@ -1,8 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 class State {
-    constructor(maxStackSize) {
+    constructor(maxStackSize, freeze = true) {
         this.maxStackSize = maxStackSize;
+        this.freeze = freeze;
         this.stackIndex = null;
         this.stack = [];
         this.flags = {
@@ -84,7 +85,9 @@ class State {
         if (this.IsBlankObject(alterations)) {
             return this.Current;
         }
-        return Object.freeze(Object.assign({}, this.Current, alterations));
+        const newState = Object.assign({}, this.Current, alterations);
+        const result = this.freeze ? Object.freeze(newState) : newState;
+        return result;
     }
 }
 exports.State = State;
