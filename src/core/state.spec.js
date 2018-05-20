@@ -37,12 +37,15 @@ describe('State', () => {
     it('should contain age 12, then 13', () => {
         const state = new state_1.State(100);
         state.Change({
-            age: 12
+            age: 12,
+            some: 'lol'
         });
         chai_1.expect(state.Current.age).to.equal(12);
         state.Change({
-            age: 13
+            age: 13,
+            some: 'lols'
         });
+        console.log(state.Current);
         chai_1.expect(state.Current.age).to.equal(13);
     });
     it('should contain age 12, then 13, then undo to 12', () => {

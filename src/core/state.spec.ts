@@ -50,15 +50,19 @@ describe('State', () => {
         const state = new State(100);
 
         state.Change({
-            age: 12
+            age: 12,
+            some: 'lol'
         });
 
         expect(state.Current.age).to.equal(12);
 
         state.Change({
-            age: 13
+            age: 13,
+            some: 'lols'
         });
 
+        console.log(state.Current);
+        
         expect(state.Current.age).to.equal(13);
     });
 

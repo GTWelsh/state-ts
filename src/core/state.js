@@ -84,7 +84,7 @@ class State {
         if (this.IsBlankObject(alterations)) {
             return this.Current;
         }
-        return Object.freeze(Object.assign({}, this.stack, alterations));
+        return Object.freeze(Object.assign({}, this.Current, alterations));
     }
 }
 exports.State = State;

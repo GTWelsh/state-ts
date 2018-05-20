@@ -89,8 +89,8 @@ class State {
         return alterations.constructor === Object;
     }
 
-    private IsBlankObject(obj) {
-        return Object.keys(obj).length === 0 && obj.constructor === Object
+    private IsBlankObject(obj: object) {
+        return Object.keys(obj).length === 0 && obj.constructor === Object;
     }
 
     private GenerateNewStackObject(alterations: object): Readonly<object> {
@@ -98,7 +98,7 @@ class State {
             return this.Current;
         }
         return Object.freeze({
-            ...this.stack,
+            ...this.Current,
             ...alterations
         });
     }
